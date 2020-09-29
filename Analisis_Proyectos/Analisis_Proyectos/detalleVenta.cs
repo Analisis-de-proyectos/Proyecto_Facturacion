@@ -11,19 +11,29 @@ namespace Analisis_Proyectos
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class detalleVenta
     {
+        [Display (Name ="Detalle identificación")]
         public int idDetalle { get; set; }
+        [Display(Name = "Número de factura")]
         public decimal numFactura { get; set; }
+        [Display(Name = "Numero de venta")]
         public decimal idVenta { get; set; }
+        [Display(Name = "Sub Total")]
         public float subTotal { get; set; }
+        [Display(Name = "Codigo de Producto")]
         public string idProducto { get; set; }
+        [Display(Name = "Descuento")]
         public decimal descuento { get; set; }
+        [Display(Name = "Cantidad")]
         public int cantidad { get; set; }
-    
+        [Display(Name = "Venta")]
         public virtual venta venta { get; set; }
+        [Display(Name = "Factura")]
         public virtual factura factura { get; set; }
+        [Display(Name = "Producto")]
         public virtual producto producto { get; set; }
     }
 }
