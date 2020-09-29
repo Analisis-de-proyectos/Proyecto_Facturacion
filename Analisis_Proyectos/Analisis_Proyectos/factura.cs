@@ -22,13 +22,13 @@ namespace Analisis_Proyectos
         }
         [Display(Name = "Numero de factura")]
         public decimal numFactura { get; set; }
-
+        [Display(Name = "Fecha")]
         public System.DateTime fecha { get; set; }
 
         public float IVA { get; set; }
         [Display(Name = "Total")]
         public float total { get; set; }
-        [Display(Name = "Referencia de pago")]
+        [Display(Name = "Código de pago")]
         public int numPago { get; set; }
         [Display(Name = "Descuento")]
         public Nullable<decimal> descuento { get; set; }
