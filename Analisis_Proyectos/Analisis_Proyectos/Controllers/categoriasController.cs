@@ -10,6 +10,9 @@ using Analisis_Proyectos;
 
 namespace Analisis_Proyectos.Controllers
 {
+
+// --------------- controlaldor de Categorias ------------------------------/
+
     public class categoriasController : Controller
     {
         private ventasEntities db = new ventasEntities();
