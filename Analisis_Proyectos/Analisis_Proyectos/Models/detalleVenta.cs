@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analisis_Proyectos
+namespace Analisis_Proyectos.Models
 {
     using System;
     using System.Collections.Generic;

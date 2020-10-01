@@ -7,26 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analisis_Proyectos
+namespace Analisis_Proyectos.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class rol
+    public partial class operacione
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public rol()
+        public operacione()
         {
             this.rol_operacion = new HashSet<rol_operacion>();
-            this.usuarios = new HashSet<usuario>();
         }
     
         public int id { get; set; }
         public string nombre { get; set; }
+        public Nullable<int> idModulo { get; set; }
     
+        public virtual modulo modulo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<rol_operacion> rol_operacion { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<usuario> usuarios { get; set; }
     }
 }

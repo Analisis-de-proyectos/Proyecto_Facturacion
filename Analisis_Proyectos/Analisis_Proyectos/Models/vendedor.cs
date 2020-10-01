@@ -7,23 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analisis_Proyectos
+namespace Analisis_Proyectos.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class modulo
+    public partial class vendedor
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public modulo()
+        public vendedor()
         {
-            this.operaciones = new HashSet<operacione>();
+            this.ventas = new HashSet<venta>();
         }
     
-        public int id { get; set; }
+        public string idVendedor { get; set; }
         public string nombre { get; set; }
+        public string apPaterno { get; set; }
+        public string apMaterno { get; set; }
+        public string dni { get; set; }
+        public string telefono { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<operacione> operaciones { get; set; }
+        public virtual ICollection<venta> ventas { get; set; }
     }
 }
