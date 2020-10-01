@@ -7,24 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analisis_Proyectos.Models
+namespace Analisis_Proyectos
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class modoPago
+    public partial class operacione
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public modoPago()
+        public operacione()
         {
-            this.facturas = new HashSet<factura>();
+            this.rol_operacion = new HashSet<rol_operacion>();
         }
     
-        public int numPago { get; set; }
+        public int id { get; set; }
         public string nombre { get; set; }
-        public string otroDetalles { get; set; }
+        public Nullable<int> idModulo { get; set; }
     
+        public virtual modulo modulo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<factura> facturas { get; set; }
+        public virtual ICollection<rol_operacion> rol_operacion { get; set; }
     }
 }

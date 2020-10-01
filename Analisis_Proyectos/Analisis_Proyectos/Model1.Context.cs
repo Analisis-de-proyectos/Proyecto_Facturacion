@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analisis_Proyectos.Models
+namespace Analisis_Proyectos
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ventasEntities2 : DbContext
+    public partial class ventasEntities3 : DbContext
     {
-        public ventasEntities2()
-            : base("name=ventasEntities2")
+        public ventasEntities3()
+            : base("name=ventasEntities3")
         {
         }
     

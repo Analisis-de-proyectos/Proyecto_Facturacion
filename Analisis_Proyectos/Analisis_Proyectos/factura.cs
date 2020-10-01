@@ -7,24 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analisis_Proyectos.Models
+namespace Analisis_Proyectos
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class categoria
+    public partial class factura
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public categoria()
+        public factura()
         {
-            this.productoes = new HashSet<producto>();
+            this.detalleVentas = new HashSet<detalleVenta>();
         }
     
-        public string idCategoria { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
+        public decimal numFactura { get; set; }
+        public System.DateTime fecha { get; set; }
+        public float IVA { get; set; }
+        public float total { get; set; }
+        public int numPago { get; set; }
+        public Nullable<decimal> descuento { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<producto> productoes { get; set; }
+        public virtual ICollection<detalleVenta> detalleVentas { get; set; }
+        public virtual modoPago modoPago { get; set; }
     }
 }

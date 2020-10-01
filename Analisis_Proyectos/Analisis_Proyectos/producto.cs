@@ -7,28 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Analisis_Proyectos.Models
+namespace Analisis_Proyectos
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class cliente
+    public partial class producto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public cliente()
+        public producto()
         {
-            this.ventas = new HashSet<venta>();
+            this.detalleVentas = new HashSet<detalleVenta>();
         }
     
-        public decimal idCliente { get; set; }
+        public string idProducto { get; set; }
         public string nombre { get; set; }
-        public string apPaterno { get; set; }
-        public string apMaterno { get; set; }
-        public string direccion { get; set; }
-        public string telefono { get; set; }
-        public decimal dni { get; set; }
+        public decimal precioUnitario { get; set; }
+        public string idCategoria { get; set; }
     
+        public virtual categoria categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<venta> ventas { get; set; }
+        public virtual ICollection<detalleVenta> detalleVentas { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\intar\Documents\Proyectos de la U\Proyecto\Facturación\Proyecto_Facturacion\Analisis_Proyectos\Analisis_Proyectos\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\intar\Documents\Proyectos de la U\Proyecto\Facturación\Proyecto_Facturacion\Analisis_Proyectos\Analisis_Proyectos\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
