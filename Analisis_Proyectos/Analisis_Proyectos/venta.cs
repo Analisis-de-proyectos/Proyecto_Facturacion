@@ -11,8 +11,7 @@ namespace Analisis_Proyectos
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class venta
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,21 +19,17 @@ namespace Analisis_Proyectos
         {
             this.detalleVentas = new HashSet<detalleVenta>();
         }
-        [Display(Name = "Código de Venta")]
+    
         public decimal idVenta { get; set; }
-        [Display(Name = "Total")]
         public float total { get; set; }
-        [Display(Name = "Código de Cliente")]
         public decimal idCliente { get; set; }
-        [Display(Name = "Código de Vendedor")]
         public string idVendedor { get; set; }
         public System.DateTime fecha { get; set; }
         public decimal IVA { get; set; }
-        [Display(Name = "Cliente")]
+    
         public virtual cliente cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<detalleVenta> detalleVentas { get; set; }
-        [Display(Name = "Vendedor")]
         public virtual vendedor vendedor { get; set; }
     }
 }

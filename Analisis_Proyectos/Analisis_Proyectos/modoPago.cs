@@ -11,8 +11,7 @@ namespace Analisis_Proyectos
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class modoPago
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,11 +19,9 @@ namespace Analisis_Proyectos
         {
             this.facturas = new HashSet<factura>();
         }
-        [Display(Name = "Numero de pago")]
+    
         public int numPago { get; set; }
-        [Display(Name = "Nombre")]
         public string nombre { get; set; }
-        [Display(Name = "Otros Detalles")]
         public string otroDetalles { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

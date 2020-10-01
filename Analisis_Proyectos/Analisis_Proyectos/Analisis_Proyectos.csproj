@@ -242,15 +242,7 @@
     <Compile Include="cliente.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\categoriasController.cs" />
-    <Compile Include="Controllers\clientesController.cs" />
-    <Compile Include="Controllers\detalleVentasController.cs" />
-    <Compile Include="Controllers\facturasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\modoPagoesController.cs" />
-    <Compile Include="Controllers\productoes1Controller.cs" />
-    <Compile Include="Controllers\productoesController.cs" />
-    <Compile Include="Controllers\ventasController.cs" />
     <Compile Include="detalleVenta.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -278,10 +270,25 @@
     <Compile Include="modoPago.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="modulo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="operacione.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="producto.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rol.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rol_operacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="vendedor.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -342,49 +349,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\categorias\Create.cshtml" />
-    <Content Include="Views\categorias\Delete.cshtml" />
-    <Content Include="Views\categorias\Details.cshtml" />
-    <Content Include="Views\categorias\Edit.cshtml" />
-    <Content Include="Views\categorias\Index.cshtml" />
-    <Content Include="Views\clientes\Create.cshtml" />
-    <Content Include="Views\clientes\Delete.cshtml" />
-    <Content Include="Views\clientes\Details.cshtml" />
-    <Content Include="Views\clientes\Edit.cshtml" />
-    <Content Include="Views\clientes\Index.cshtml" />
-    <Content Include="Views\ventas\Create.cshtml" />
-    <Content Include="Views\ventas\Delete.cshtml" />
-    <Content Include="Views\ventas\Details.cshtml" />
-    <Content Include="Views\ventas\Edit.cshtml" />
-    <Content Include="Views\ventas\Index.cshtml" />
-    <Content Include="Views\detalleVentas\Create.cshtml" />
-    <Content Include="Views\detalleVentas\Delete.cshtml" />
-    <Content Include="Views\detalleVentas\Details.cshtml" />
-    <Content Include="Views\detalleVentas\Edit.cshtml" />
-    <Content Include="Views\detalleVentas\Index.cshtml" />
-    <Content Include="Views\productoes\Create.cshtml" />
-    <Content Include="Views\productoes\Delete.cshtml" />
-    <Content Include="Views\productoes\Details.cshtml" />
-    <Content Include="Views\productoes\Edit.cshtml" />
-    <Content Include="Views\productoes\Index.cshtml" />
-    <Content Include="Views\productoes1\Create.cshtml" />
-    <Content Include="Views\productoes1\Delete.cshtml" />
-    <Content Include="Views\productoes1\Details.cshtml" />
-    <Content Include="Views\productoes1\Edit.cshtml" />
-    <Content Include="Views\productoes1\Index.cshtml" />
-    <Content Include="Views\modoPagoes\Create.cshtml" />
-    <Content Include="Views\modoPagoes\Delete.cshtml" />
-    <Content Include="Views\modoPagoes\Details.cshtml" />
-    <Content Include="Views\modoPagoes\Edit.cshtml" />
-    <Content Include="Views\modoPagoes\Index.cshtml" />
-    <Content Include="Views\facturas\Create.cshtml" />
-    <Content Include="Views\facturas\Delete.cshtml" />
-    <Content Include="Views\facturas\Details.cshtml" />
-    <Content Include="Views\facturas\Edit.cshtml" />
-    <Content Include="Views\facturas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Filters\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

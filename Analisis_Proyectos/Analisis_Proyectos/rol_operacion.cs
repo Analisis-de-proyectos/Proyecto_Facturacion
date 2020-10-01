@@ -12,18 +12,13 @@ namespace Analisis_Proyectos
     using System;
     using System.Collections.Generic;
     
-    public partial class detalleVenta
+    public partial class rol_operacion
     {
-        public int idDetalle { get; set; }
-        public decimal numFactura { get; set; }
-        public decimal idVenta { get; set; }
-        public float subTotal { get; set; }
-        public string idProducto { get; set; }
-        public decimal descuento { get; set; }
-        public int cantidad { get; set; }
+        public int id { get; set; }
+        public Nullable<int> idRol { get; set; }
+        public Nullable<int> idOperacion { get; set; }
     
-        public virtual venta venta { get; set; }
-        public virtual factura factura { get; set; }
-        public virtual producto producto { get; set; }
+        public virtual operacione operacione { get; set; }
+        public virtual rol rol { get; set; }
     }
 }

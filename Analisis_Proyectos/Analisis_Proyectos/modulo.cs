@@ -12,23 +12,18 @@ namespace Analisis_Proyectos
     using System;
     using System.Collections.Generic;
     
-    public partial class factura
+    public partial class modulo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public factura()
+        public modulo()
         {
-            this.detalleVentas = new HashSet<detalleVenta>();
+            this.operaciones = new HashSet<operacione>();
         }
     
-        public decimal numFactura { get; set; }
-        public System.DateTime fecha { get; set; }
-        public float IVA { get; set; }
-        public float total { get; set; }
-        public int numPago { get; set; }
-        public Nullable<decimal> descuento { get; set; }
+        public int id { get; set; }
+        public string nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<detalleVenta> detalleVentas { get; set; }
-        public virtual modoPago modoPago { get; set; }
+        public virtual ICollection<operacione> operaciones { get; set; }
     }
 }

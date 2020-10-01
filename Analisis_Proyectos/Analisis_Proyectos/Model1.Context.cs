@@ -13,10 +13,10 @@ namespace Analisis_Proyectos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ventasEntities : DbContext
+    public partial class ventasEntities2 : DbContext
     {
-        public ventasEntities()
-            : base("name=ventasEntities")
+        public ventasEntities2()
+            : base("name=ventasEntities2")
         {
         }
     
@@ -30,7 +30,12 @@ namespace Analisis_Proyectos
         public virtual DbSet<detalleVenta> detalleVentas { get; set; }
         public virtual DbSet<factura> facturas { get; set; }
         public virtual DbSet<modoPago> modoPagoes { get; set; }
+        public virtual DbSet<modulo> moduloes { get; set; }
+        public virtual DbSet<operacione> operaciones { get; set; }
         public virtual DbSet<producto> productoes { get; set; }
+        public virtual DbSet<rol> rols { get; set; }
+        public virtual DbSet<rol_operacion> rol_operacion { get; set; }
+        public virtual DbSet<usuario> usuarios { get; set; }
         public virtual DbSet<vendedor> vendedors { get; set; }
         public virtual DbSet<venta> ventas { get; set; }
     }
