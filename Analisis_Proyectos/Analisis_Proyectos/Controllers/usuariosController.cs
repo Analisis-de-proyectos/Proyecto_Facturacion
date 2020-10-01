@@ -6,116 +6,114 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Analisis_Proyectos.Models;
+using Analisis_Proyectos;
 
 namespace Analisis_Proyectos.Controllers
 {
-    public class usuariosController : Controller
-    {
-        private ventasEntities2 db = new ventasEntities2();
 
-        // GET: usuarios
+// --------------- controlaldor de Categorias ------------------------------/
+
+    public class categoriasController : Controller
+    {
+        private ventasEntities db = new ventasEntities();
+
+        // GET: categorias
         public ActionResult Index()
         {
-            var usuarios = db.usuarios.Include(u => u.rol);
-            return View(usuarios.ToList());
+            return View(db.categorias.ToList());
         }
 
-        // GET: usuarios/Details/5
-        public ActionResult Details(int? id)
+        // GET: categorias/Details/5
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            usuario usuario = db.usuarios.Find(id);
-            if (usuario == null)
+            categoria categoria = db.categorias.Find(id);
+            if (categoria == null)
             {
                 return HttpNotFound();
             }
-            return View(usuario);
+            return View(categoria);
         }
 
-        // GET: usuarios/Create
+        // GET: categorias/Create
         public ActionResult Create()
         {
-            ViewBag.idRol = new SelectList(db.rols, "id", "nombre");
             return View();
         }
 
-        // POST: usuarios/Create
+        // POST: categorias/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,nombre,email,password,fecha,idRol")] usuario usuario)
+        public ActionResult Create([Bind(Include = "idCategoria,nombre,descripcion")] categoria categoria)
         {
             if (ModelState.IsValid)
             {
-                db.usuarios.Add(usuario);
+                db.categorias.Add(categoria);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.idRol = new SelectList(db.rols, "id", "nombre", usuario.idRol);
-            return View(usuario);
+            return View(categoria);
         }
 
-        // GET: usuarios/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: categorias/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            usuario usuario = db.usuarios.Find(id);
-            if (usuario == null)
+            categoria categoria = db.categorias.Find(id);
+            if (categoria == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.idRol = new SelectList(db.rols, "id", "nombre", usuario.idRol);
-            return View(usuario);
+            return View(categoria);
         }
 
-        // POST: usuarios/Edit/5
+        // POST: categorias/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,nombre,email,password,fecha,idRol")] usuario usuario)
+        public ActionResult Edit([Bind(Include = "idCategoria,nombre,descripcion")] categoria categoria)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(usuario).State = EntityState.Modified;
+                db.Entry(categoria).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.idRol = new SelectList(db.rols, "id", "nombre", usuario.idRol);
-            return View(usuario);
+            return View(categoria);
         }
 
-        // GET: usuarios/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: categorias/Delete/5
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            usuario usuario = db.usuarios.Find(id);
-            if (usuario == null)
+            categoria categoria = db.categorias.Find(id);
+            if (categoria == null)
             {
                 return HttpNotFound();
             }
-            return View(usuario);
+            return View(categoria);
         }
 
-        // POST: usuarios/Delete/5
+        // POST: categorias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
-            usuario usuario = db.usuarios.Find(id);
-            db.usuarios.Remove(usuario);
+            categoria categoria = db.categorias.Find(id);
+            db.categorias.Remove(categoria);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -12,6 +12,9 @@ using Analisis_Proyecto_Facturacion.Models;
 
 namespace Analisis_Proyecto_Facturacion.Controllers
 {
+
+// Controlador de cuentas
+//
     [Authorize]
     public class AccountController : Controller
     {
