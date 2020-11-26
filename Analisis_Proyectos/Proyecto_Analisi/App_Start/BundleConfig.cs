@@ -27,4 +27,6 @@ namespace Proyecto_Analisi
                       "~/Content/site.css"));
         }
     }
+    
+    
 }
