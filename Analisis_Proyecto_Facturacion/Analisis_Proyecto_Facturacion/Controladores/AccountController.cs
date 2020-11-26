@@ -416,6 +416,8 @@ namespace Analisis_Proyecto_Facturacion.Controllers
                     _userManager = null;
                 }
 
+
+
                 if (_signInManager != null)
                 {
                     _signInManager.Dispose();
